@@ -1,10 +1,12 @@
 .footer{margin-top: auto;
     background: #252531;
-    color: #fff;
     padding-top:3.75rem;
+    color: #888;
 
     &__top{
         margin-bottom: 3.125rem;
+        font-size:0.875rem ;
+        
         &-img{
             img{
                 margin-bottom: 1rem;
@@ -15,7 +17,7 @@
     &__copy{
         padding: 1.25rem 0;
         border-top: 1px solid rgba(255, 255, 255, 0.02);
-        color: #888;
+       
         a{
             color: inherit  ;
         }
@@ -28,12 +30,12 @@
         }
     }
     &__title{
+        font-size: inherit;
         position: relative;
         text-transform: uppercase;
         color: #b19777;
-    font-size: 12px;
-    letter-spacing: 2px;
-    margin-bottom: 30px;
+    letter-spacing: 1px;
+    margin-bottom: 1.05rem;
     padding-bottom: 10px;
         &::after{
             content: '';

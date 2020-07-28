@@ -7,7 +7,7 @@ export default function Home() {
     
 <Layout>
   this is from layout
-  <span class="icon icon-twitter"></span>
+  <span className="icon icon-twitter"></span>
   </Layout>
 
     {/* <div className={styles.container}>
