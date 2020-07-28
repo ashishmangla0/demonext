@@ -1,0 +1,49 @@
+.footer{margin-top: auto;
+    background: #252531;
+    color: #fff;
+    padding-top:3.75rem;
+
+    &__top{
+        margin-bottom: 3.125rem;
+        &-img{
+            img{
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    &__copy{
+        padding: 1.25rem 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.02);
+        color: #888;
+        a{
+            color: inherit  ;
+        }
+        &-content{
+            margin: 0;
+            font-size: 0.8125rem;
+            &--right{
+                text-align: right;
+            }
+        }
+    }
+    &__title{
+        position: relative;
+        text-transform: uppercase;
+        color: #b19777;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+        &::after{
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            height: 1px;
+        }
+    }
+
+}
