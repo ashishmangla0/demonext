@@ -1,0 +1,36 @@
+@import "./variables";
+@import "./default";
+.icon-dribbble {
+  &:before {
+    content: $icon-dribbble; 
+  }
+}
+.icon-linkedin {
+  &:before {
+    content: $icon-linkedin; 
+  }
+}
+.icon-pinterest {
+  &:before {
+    content: $icon-pinterest; 
+  }
+}
+.icon-twitter {
+  &:before {
+    content: $icon-twitter; 
+  }
+}
+.icon-next .path1 {
+  &:before {
+    content: $icon-next-path1;  
+    color: rgb(244, 67, 54);
+  }
+}
+.icon-next .path2 {
+  &:before {
+    content: $icon-next-path2;  
+    margin-left: -1em;  
+    color: rgb(0, 0, 0);
+  }
+}
+
