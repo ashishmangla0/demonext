@@ -1,8 +1,8 @@
-const ListItem = ({children}) =>{
+const ListItem = (props) =>{
     return(
         <>
-       <li>
-           {children}
+       <li className={props.class ?props.class : null}>
+           {props.children}
        </li>
         </>
     )
