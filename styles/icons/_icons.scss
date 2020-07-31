@@ -1,5 +1,10 @@
 @import "./variables";
 @import "./default";
+.icon-facebook {
+  &:before {
+    content: $icon-facebook; 
+  }
+}
 .icon-behance {
   &:before {
     content: $icon-behance; 

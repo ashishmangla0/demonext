@@ -18,7 +18,7 @@ const Footer = () => {
                                         Our team takes over everything,
                                         from an idea and concept development to realization.
                                     </p>
-                                    <SocialMedia class="list list--nostyle list--social-media" itemClass="social-media__item"/>
+                                    <SocialMedia class="list list--nostyle list--social-media footer__social" itemClass="footer__social-item"/>
                                 </div>
                             </div>
                             <div className="col-lg-2 offset-lg-1">
