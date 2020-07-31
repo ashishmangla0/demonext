@@ -1,12 +1,31 @@
-const socialLinks = ["facebook", 'twitter', 'behance', 'pinterest']
+const socialLinks = [
+    {
+        "title":"facebook",
+        "link":'link1'
+    },
+    {
+        "title":"twitter",
+        "link":'link2'
+    },
+    {
+        "title":"behance",
+        "link":'link3'
+    },
+    {
+        "title":"pinterest",
+        "link":'link4'
+    }
+]
 import ListItem from './ListItem';
-const SocialMedia = () => {
+const SocialMedia = (props) => {
     return (
         <>
-            <ul className="list social-media">
+            <ul className={`${props.class}`}>
                 {socialLinks.map((socialLink, index) =>
-                    <ListItem key={index.toString()} class="social-media__item">
-                        <a href={`tel:${socialLink}`}>{socialLink}</a>
+                    <ListItem key={socialLink.title} class={props.itemClass}>
+                        <a href={`${socialLink.link}`}>
+                            <span className={`icon icon-${socialLink.title}`}></span>
+                        </a>
                     </ListItem>
                 )}
 

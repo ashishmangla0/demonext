@@ -1,5 +1,10 @@
 @import "./variables";
 @import "./default";
+.icon-behance {
+  &:before {
+    content: $icon-behance; 
+  }
+}
 .icon-dribbble {
   &:before {
     content: $icon-dribbble; 
@@ -20,17 +25,3 @@
     content: $icon-twitter; 
   }
 }
-.icon-next .path1 {
-  &:before {
-    content: $icon-next-path1;  
-    color: rgb(244, 67, 54);
-  }
-}
-.icon-next .path2 {
-  &:before {
-    content: $icon-next-path2;  
-    margin-left: -1em;  
-    color: rgb(0, 0, 0);
-  }
-}
-
