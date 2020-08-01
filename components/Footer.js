@@ -1,7 +1,7 @@
 const addresses = ['B17 Princess Road', 'B17 Princess Road', 'B17 Princess Road'];
 const mails = ['mail1', 'mail2'];
 const calls = ['1234567890','1234567890']
-import Link from 'next/link'
+import Link from 'next/link';
 import ListItem from './ListItem';
 import SocialMedia from './SocialMedia';
 const Footer = () => {
