@@ -1,48 +1,59 @@
+import React, {  useEffect, useState } from 'react';
 import SocialMedia from './SocialMedia';
 import Link from 'next/link'
-const Header = () => {
+
+const Header = (props) => {
+    const [isSticky, setSticky] = useState(false);
+
+    const handleScroll =() =>{
+        const header  = document.querySelector('.header');
+        const sticky = header.offsetTop;
+        if (window.pageYOffset > sticky) {
+            header.classList.add('header--fixed');
+        }
+        else{
+            header.classList.remove('header--fixed');
+        }
+    };
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        //   cleanup the listeners on unmount
+        return () => {
+          window.removeEventListener("scroll", handleScroll);
+        };
+      }, []);
     return (
         <>
             <header className="header">
-                <nav className="header__nav">
+                <nav className="header__navbar navbar navbar-expand-lg">
                     <div className="container">
-                        <Link href="/" className="navbar-brand">
-                            <a>Logo</a>
+                        <Link href="/" >
+                            <a className="navbar-brand">Logo</a>
                         </Link>
-                        <div class="collapse navbar-collapse" id="navbarsExample07">
-                            <ul class="navbar-nav ml-auto">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <div className="collapse navbar-collapse" id="navbarsExample07">
+                            <ul className="navbar-nav ml-auto">
+                                <li className="nav-item active">
+                                    <Link href="/">
+                                        <a className="nav-link">Home</a>
+                                    </Link>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Link</a>
+                                <li className="nav-item">
+                                <Link href="/" >
+                                <a className="nav-link">Home</a>
+                                    </Link>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                                    <div class="dropdown-menu" aria-labelledby="dropdown07">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                        <a class="dropdown-item" href="#">Something else here</a>
-                                    </div>
+                                <li className="nav-item">
+                                <Link href="/" >
+                                <a className="nav-link">Home</a>
+                                    </Link>
                                 </li>
                             </ul>
-                            <SocialMedia class="list list--nostyle list--social-media header__social" itemClass="header__social-item" />    
+                            <SocialMedia class="list list--nostyle list--social-media header__social" itemClass="header__social-item" />
                         </div>
-
-
-
-
-                        
-                        
-                        </div>
+                    </div>
                 </nav>
             </header>
-
         </>
     )
-
 }
 export default Header
